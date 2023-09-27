@@ -1,0 +1,13 @@
+【开源地址】：
+GitHub：https://github.com/kimiliucn/Kimi.RocketMQ.NET
+Gitee：https://gitee.com/kimiliucn/Kimi.RocketMQ.NET
+
+
+【使用教程】：
+第一章：https://www.cnblogs.com/kimiliucn/p/17662052.html
+第二章：https://www.cnblogs.com/kimiliucn/p/17667200.html
+
+
+[备用地址]：
+第一章：https://blog.csdn.net/2301_79251107/article/details/132536594
+第二章：https://blog.csdn.net/2301_79251107/article/details/132581955

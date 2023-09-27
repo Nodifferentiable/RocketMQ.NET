@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B024C22-227A-42BE-A6FA-5C56CCAAF183}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kimi.RocketMQ.NET</RootNamespace>
+    <AssemblyName>Kimi.RocketMQ.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ConsumerTagAttribute.cs" />
+    <Compile Include="Attributes\EventTypeAttribute.cs" />
+    <Compile Include="Core\ConsumerManager.cs" />
+    <Compile Include="Core\IConsumerMsg.cs" />
+    <Compile Include="Core\QueueOnsProducer.cs" />
+    <Compile Include="Helper\JsonUtility.cs" />
+    <Compile Include="Models\IQueueOnsCommonModel.cs" />
+    <Compile Include="Models\ONSPropertyConfigModel.cs" />
+    <Compile Include="Models\QueueOnsCommonModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDK\Action.cs" />
+    <Compile Include="SDK\ConsumeContext.cs" />
+    <Compile Include="SDK\ConsumeOrderContext.cs" />
+    <Compile Include="SDK\LocalTransactionChecker.cs" />
+    <Compile Include="SDK\LocalTransactionExecuter.cs" />
+    <Compile Include="SDK\Message.cs" />
+    <Compile Include="SDK\MessageListener.cs" />
+    <Compile Include="SDK\MessageOrderListener.cs" />
+    <Compile Include="SDK\MessageQueueONS.cs" />
+    <Compile Include="SDK\ONSChannel.cs" />
+    <Compile Include="SDK\ONSClient4CPP.cs" />
+    <Compile Include="SDK\ONSClient4CPPPINVOKE.cs" />
+    <Compile Include="SDK\ONSClientException.cs" />
+    <Compile Include="SDK\ONSFactory.cs" />
+    <Compile Include="SDK\ONSFactoryAPI.cs" />
+    <Compile Include="SDK\ONSFactoryProperty.cs" />
+    <Compile Include="SDK\ONSPullStatus.cs" />
+    <Compile Include="SDK\OrderAction.cs" />
+    <Compile Include="SDK\OrderConsumer.cs" />
+    <Compile Include="SDK\OrderProducer.cs" />
+    <Compile Include="SDK\Producer.cs" />
+    <Compile Include="SDK\PullConsumer.cs" />
+    <Compile Include="SDK\PullResultONS.cs" />
+    <Compile Include="SDK\PushConsumer.cs" />
+    <Compile Include="SDK\SendResultONS.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_CONSTSTRING.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ConsumeContext.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ConsumeOrderContext.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_LocalTransactionChecker.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_Message.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_MessageOrderListener.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_MessageQueueONS.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_MQException.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ONSClientException.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ONSCLIENT_API.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ons__LocalTransactionChecker.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ons__OrderConsumer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ons__OrderProducer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ons__PullConsumer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ons__PushConsumer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_ons__TransactionProducer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_OrderConsumer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_OrderProducer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_PushConsumer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_SendResult.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_SendResultONS.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_std__mapT_std__string_std__string_t.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_std__string.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_std__vectorT_ons__MessageQueueONS_t.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_std__vectorT_ons__Message_t.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_TransactionProducer.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_TransactionStatus.cs" />
+    <Compile Include="SDK\SWIGTYPE_p_unsigned_char.cs" />
+    <Compile Include="SDK\SystemPropKey.cs" />
+    <Compile Include="SDK\TransactionProducer.cs" />
+    <Compile Include="SDK\TransactionStatus.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
